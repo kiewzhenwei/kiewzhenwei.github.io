@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiew Zhen Wei | Equipment Engineer & Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background: #e5e7eb;
+            z-index: -1;
+        }
+        /* Photo Animation */
+        .profile-photo-container {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Initials Logo -->
+                    <span class="font-bold text-xl text-blue-900 tracking-tighter">KZW<span class="text-blue-500">.</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#skills" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#education" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Updated with Photo) -->
+    <header id="about" class="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-white relative overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-50 blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                
+                <!-- Text Content -->
+                <div class="text-center md:text-left md:w-1/2">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-semibold tracking-wide uppercase mb-4 border border-blue-100">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                        Open to Opportunities in Europe (2026)
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                        Bridging <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Hardware</span> & <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Data Intelligence</span>.
+                    </h1>
+                    <p class="mt-4 text-lg text-slate-600 leading-relaxed max-w-xl mx-auto md:mx-0">
+                        I am <strong>Kiew Zhen Wei</strong>, an Equipment Engineer & M.Sc. Candidate combining semiconductor expertise (Micron, ASML) with predictive analytics to drive Industry 4.0.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/in/kiew-zhen-wei-3799641b0" target="_blank" class="flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-900 hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </a>
+                        <button onclick="document.getElementById('contact').scrollIntoView()" class="flex items-center justify-center px-6 py-3 border border-slate-200 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 transition-all shadow-sm hover:shadow-md">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Photo Area -->
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="profile-photo-container relative">
+                        <!-- Decorative Circles -->
+                        <div class="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-20 transform translate-y-4"></div>
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full blur-xl opacity-20"></div>
+                        
+                        <!-- Main Image Container -->
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-2xl overflow-hidden relative z-10 bg-slate-200">
+                            <!-- Using the specific filename provided by the user -->
+                            <img src="photo_2024-10-10_21-30-24.jpg" alt="Kiew Zhen Wei" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Kiew+Zhen+Wei&background=0D8ABC&color=fff&size=512&font-size=0.33'">
+                        </div>
+
+                        <!-- Floating Badge 1 -->
+                        <div class="absolute top-10 -left-10 z-20 glass-card px-4 py-2 rounded-lg shadow-lg flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-blue-100 p-2 rounded-full text-blue-600"><i class="fas fa-database"></i></div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-bold">M.Sc. Candidate</div>
+                                <div class="text-sm font-bold text-slate-800">Data Analytics</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2 -->
+                        <div class="absolute bottom-10 -right-4 z-20 glass-card px-4 py-2 rounded-lg shadow-lg flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+                            <div class="bg-green-100 p-2 rounded-full text-green-600"><i class="fas fa-microchip"></i></div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-bold">Micron/ASML</div>
+                                <div class="text-sm font-bold text-slate-800">Hardware Exp.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Metrics -->
+    <section class="py-10 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4 transform hover:scale-105 transition-transform">
+                    <div class="text-4xl font-bold text-blue-600 mb-1">97%</div>
+                    <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Tool Availability</div>
+                </div>
+                <div class="p-4 transform hover:scale-105 transition-transform">
+                    <div class="text-4xl font-bold text-blue-600 mb-1">90%</div>
+                    <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Alarm Reduction</div>
+                </div>
+                <div class="p-4 transform hover:scale-105 transition-transform">
+                    <div class="text-4xl font-bold text-blue-600 mb-1">50%</div>
+                    <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Turnaround Improvement</div>
+                </div>
+                <div class="p-4 transform hover:scale-105 transition-transform">
+                    <div class="text-4xl font-bold text-blue-600 mb-1">2+</div>
+                    <div class="text-sm font-medium text-slate-500 uppercase tracking-wide">Years Global Exp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Professional Journey</h2>
+                <p class="mt-4 text-lg text-slate-600">From Taiwan to Singapore, optimizing High-Volume Manufacturing.</p>
+            </div>
+
+            <div class="relative timeline-line max-w-4xl mx-auto">
+                
+                <!-- Micron -->
+                <div class="relative pl-12 pb-12 group">
+                    <div class="absolute left-0 top-0 bg-blue-600 h-10 w-10 rounded-full flex items-center justify-center text-white border-4 border-white shadow-md z-10 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Probe Equipment Engineer</h3>
+                                <div class="text-blue-600 font-semibold">Micron Technology, Singapore</div>
+                            </div>
+                            <span class="text-sm text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200 mt-2 md:mt-0">Apr 2025 – Present</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>AI Innovation:</strong> Collaborated with Automation team to develop 'ES Sensei', an AI-powered chatbot for technician training.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Design:</strong> Created automated door handlers for HBM tools using <span class="text-blue-600 font-medium">Autodesk Inventor</span> & 3D Printing.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Impact:</strong> Sustained 40 multicell probe systems (TEL/Semics) at 97% availability across HBM lines.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Optimization:</strong> Reduced nuisance alarms by 90% (20 to 2 daily) via Z-height calibration.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ASML -->
+                <div class="relative pl-12 pb-12 group">
+                    <div class="absolute left-0 top-0 bg-blue-900 h-10 w-10 rounded-full flex items-center justify-center text-white border-4 border-white shadow-md z-10 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">System Assembly Engineer</h3>
+                                <div class="text-blue-600 font-semibold">ASML Taiwan Ltd., Tainan</div>
+                            </div>
+                            <span class="text-sm text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200 mt-2 md:mt-0">Apr 2024 – Apr 2025</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Data Driven:</strong> Automated monitoring ecosystem using <span class="text-blue-600 font-medium">Power BI & Spotfire</span> to detect beam instability.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Efficiency:</strong> Slashed maintenance turnaround time by 50% through vendor coordination.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Safety:</strong> Achieved 100% ISO 9001 compliance for 80 electron gun test benches.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NI Malaysia -->
+                <div class="relative pl-12 group">
+                    <div class="absolute left-0 top-0 bg-slate-400 h-10 w-10 rounded-full flex items-center justify-center text-white border-4 border-white shadow-md z-10 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">R&D Mechanical Engineer Intern</h3>
+                                <div class="text-blue-600 font-semibold">NI Malaysia Sdn Bhd, Penang</div>
+                            </div>
+                            <span class="text-sm text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200 mt-2 md:mt-0">Jul 2022 – Oct 2022</span>
+                        </div>
+                        <p class="text-slate-600 mb-2">Designed mechanical fixtures (SolidWorks/CREO) and developed LabVIEW liquid cooling systems, improving efficiency by 5%.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">Technical Arsenal</h2>
+                <p class="mt-4 text-lg text-slate-400">The "Hybrid" Skillset: Hardware + Data + Design</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Hardware Card -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors">
+                    <div class="text-blue-400 text-3xl mb-4"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Hardware</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">TEL Cellcia</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Semics OPERA</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">eBeam/SEM</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Probe Systems</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Wafer Probing</span>
+                    </div>
+                </div>
+
+                <!-- Data Card -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-green-500 transition-colors">
+                    <div class="text-green-400 text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Data Analytics</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Python (Pandas)</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Tableau</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Power BI</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Spotfire</span>
+                    </div>
+                </div>
+
+                <!-- Design Card -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition-colors">
+                    <div class="text-purple-400 text-3xl mb-4"><i class="fas fa-drafting-compass"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Design (CAD)</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Autodesk Inventor</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">SolidWorks</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Creo Parametric</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">3D Printing</span>
+                    </div>
+                </div>
+
+                <!-- Process Card -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-red-500 transition-colors">
+                    <div class="text-red-400 text-3xl mb-4"><i class="fas fa-clipboard-check"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Process & Quality</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Yield Analysis</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">Root Cause (RCA)</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">8D / FMEA</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">ISO 9001</span>
+                        <span class="px-3 py-1 bg-slate-700 rounded-lg text-sm">6S Standards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certs -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Education -->
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 transform hover:-translate-y-1 transition-transform">
+                            <h3 class="text-lg font-bold">M.Sc. Business Intelligence & Analytics</h3>
+                            <p class="text-blue-600">Universiti Teknologi Malaysia (UTM)</p>
+                            <p class="text-sm text-slate-500">Sept 2024 - Aug 2026 (Expected) | CGPA 3.88</p>
+                            <p class="mt-2 text-slate-700 text-sm italic">"Predictive Resource Modeling & Anomaly Detection using Machine Learning"</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                            <h3 class="text-lg font-bold">B.Eng. Electrical-Mechatronics</h3>
+                            <p class="text-blue-600">Universiti Teknologi Malaysia (UTM)</p>
+                            <p class="text-sm text-slate-500">Sept 2019 - Nov 2023 | CGPA 3.89</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                        <i class="fas fa-certificate text-blue-600 mr-3"></i> Certifications
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="h-10 w-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mr-4 font-bold"><i class="fas fa-award"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">LEAN Six Sigma Yellow Belt</h4>
+                                <p class="text-sm text-slate-500">Issued by ASML</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4 font-bold"><i class="fab fa-google"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Google Data Analytics Professional</h4>
+                                <p class="text-sm text-slate-500">Certification</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-4 font-bold"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">ISO 9001: Equipment Calibration</h4>
+                                <p class="text-sm text-slate-500">Quality Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="mb-8">I am open to discussing engineering opportunities starting mid 2026.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:kiewzhenwei@gmail.com" class="flex items-center justify-center bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg transition-colors border border-slate-700">
+                    <i class="fas fa-envelope text-blue-400 text-xl mr-3"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-400">Email Me</div>
+                        <div class="font-bold text-white">kiewzhenwei@gmail.com</div>
+                    </div>
+                </a>
+                <a href="tel:+6593753664" class="flex items-center justify-center bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg transition-colors border border-slate-700">
+                    <i class="fas fa-phone text-green-400 text-xl mr-3"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-400">Call Me</div>
+                        <div class="font-bold text-white">+65 9375 3664</div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/kiew-zhen-wei-3799641b0" target="_blank" class="flex items-center justify-center bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg transition-colors border border-slate-700">
+                    <i class="fab fa-linkedin text-blue-400 text-xl mr-3"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-400">LinkedIn</div>
+                        <div class="font-bold text-white">Connect Profile</div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-sm text-slate-500">
+                &copy; 2026 Kiew Zhen Wei. All rights reserved. <br>
+                <span class="text-xs">Built with Hardware & Data in mind.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
